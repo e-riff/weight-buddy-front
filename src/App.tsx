@@ -1,10 +1,9 @@
-import type {User} from './types/user'
-import { useState } from 'react'
 import './App.css'
 import {Login} from "./components/user/Login.tsx";
+import {useAuth} from "./hooks/useAuth.ts";
 
 function App() {
-  const [user] = useState<User | null>(null)
+  const {user} = useAuth()
 
   return (
       user
